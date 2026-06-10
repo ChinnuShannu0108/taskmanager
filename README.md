@@ -3,8 +3,8 @@
 A Spring Boot based backend web application that enables users to manage their tasks efficiently. It provides REST APIs to create, update, delete, and retrieve tasks, with MySQL database integration.
 
 ## used technologies
-- intelliJ
-- postman
+- IntelliJ
+- Postman
 - Spring Boot
 - MySQL
 - REST APIs
