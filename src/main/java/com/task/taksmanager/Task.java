@@ -9,12 +9,15 @@ import lombok.Data;
 public class Task {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
 
     private String title;
 
     private String description;
 
     private String status;
+
+    private String createdBy;
 }

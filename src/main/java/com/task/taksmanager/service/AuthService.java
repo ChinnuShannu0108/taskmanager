@@ -36,4 +36,20 @@ public class AuthService {
         }
         throw new RuntimeException("Invalid credentials");
     }
+    public String updatePassword(String username, String newPassword) {
+        User user = userRepository.findByUsername(username)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        user.setPassword(passwordEncoder.encode(newPassword));
+        userRepository.save(user);
+        return "Password updated successfully!";
+    }
+    public String resetPassword(String username, String newPassword) {
+        User user = userRepository.findByUsername(username)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        user.setPassword(passwordEncoder.encode(newPassword));
+        userRepository.save(user);
+        return "Password reset successfully!";
+    }
+
+
 }
